@@ -1,0 +1,40 @@
+<div class="container col-md-6" id="content-editar">
+    <div class="card">
+        <div class="card-header" id="content-header">
+            <h3 id="editarTitle">Cambiar Fecha Cita</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+
+                <div class="form-group">
+                    <label for="">Cédula del paciente:</label>
+                    <input type="text" class="form-control" [(ngModel)]="cita.cedula" name="cedula" disabled>
+                </div>
+
+                <div class="form-group" id="content-name">
+                    <label for="">Nombre del paciente:</label>
+                    <input type="text" class="form-control" [(ngModel)]="cita.nombre" name="nombre" disabled>
+                </div>
+
+                <div class="form-group" id="content-lastname">
+                    <label for="">Apellido del paciente:</label>
+                    <input type="text" class="form-control" [(ngModel)]="cita.apellido" name="apellido" disabled>
+                </div>
+
+                <div class="form-group" id="content-date">
+                    <label for="">Fecha de la cita:</label>
+                    <input type="date" class="form-control" [(ngModel)]="cita.fechaCita" name="fechaCita">
+                </div>
+
+                <div class="form-group" id="content-type">
+                    <label for="">Tipo de cita:</label>
+                    <input type="number" class="form-control" [(ngModel)]="cita.tipoCita" name="tipoCita" disabled>
+                </div>
+
+                <div class="form-group" id="content-button">
+                    <button (click)="actualizar(cita)" class="btn btn-info">Modificar Cita</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container" id="content-consultar">
+    <div class="card">
+        <div class="card-header">
+            <h3 id="listadoTitle">Listado de Citas</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr id="list-data">
+                        <th>Cédula</th>
+                        <th>Nombre Paciente</th>
+                        <th>Fecha de Cita</th>
+                        <th>Tipo de Cita</th>
+                        <th>Valor de Cita</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cita of citas" class="text-center">
+                        <td>{{cita.cedula}}</td>
+                        <td>{{cita.nombre}} {{cita.apellido}}</td>
+                        <td>{{cita.fechaCita}}</td>
+                        <td>{{cita.tipoCita}}</td>
+                        <td>{{cita.valor}}</td>
+                        <td>
+                            <button (click)="editar(cita)" class="btn btn-warning">Modificar Fecha</button>
+                            <button (click)="eliminar(cita)" class="btn btn-danger" id="button-eliminar">Eliminar Cita</button>
+                        </td>
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
